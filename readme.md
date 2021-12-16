@@ -1,6 +1,8 @@
-###########################################
-Sistem Manajemen Anggaran & Belanja (SIMAB)
-###########################################
+###################
+Sistem Manajemen 
+Anggaran & Belanja 
+[SIMAB]
+###################
 
 **Feature**
 - Add Cost Code
