@@ -1,8 +1,10 @@
-###################
-CiCOOL
-###################
+###########################################
+Sistem Manajemen Anggaran & Belanja (SIMAB)
+###########################################
 
 **Feature**
+- Add Cost Code
+- Input CR for Admin
 - Wizzard setup
 - CRUD Generator
 - Auto generate Web API
