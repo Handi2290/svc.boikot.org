@@ -53,7 +53,11 @@ class Tbl_code extends API
 		$tbl_codes = $this->model_api_tbl_code->get($filter, $field, $limit, $start, $select_field);
 		$total = $this->model_api_tbl_code->count_all($filter, $field);
 		$tbl_codes = array_map(function($row){
-						
+			$row->uraian = $this->db
+			    ->get_where('tbl_code', [
+			    	'id' => $row->uraian])
+			    ->row();
+	        			
 			return $row;
 		}, $tbl_codes);
 
@@ -109,7 +113,11 @@ class Tbl_code extends API
 				], API::HTTP_NOT_FOUND);
 		}
 
-					
+		$tbl_code->uraian = $this->db
+		    ->get_where('tbl_code', [
+		    	'id' => $tbl_code->uraian])
+		    ->row();
+        			
 		$data['tbl_code'] = $tbl_code;
 		if ($data['tbl_code']) {
 			
